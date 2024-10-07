@@ -64,3 +64,99 @@
 //     }
 //     return temp;
 // }
+
+
+// polyfill for reduce
+
+// Array.prototype.myReduce = function (cb, initialValue) {
+//     var accumulator = initialValue
+
+//     for (let i = 0; i< this.length; i++){
+//         accumulator = accumulator ? cb(accumulator , this[i], i, this): this[i]
+//     }
+//     return accumulator;
+// }
+
+
+
+// interview questions on map,filter reduce
+
+const students = [
+    {
+        name: "John Doe",
+        rollNumber: "101",
+        marks: 85
+    },
+    {
+        name: "Jane Smith",
+        rollNumber: "102",
+        marks: 92
+    },
+    {
+        name: "Michael Johnson",
+        rollNumber: "103",
+        marks: 78
+    },
+    {
+        name: "Emily Davis",
+        rollNumber: "104",
+        marks: 88
+    },
+    {
+        name: "William Brown",
+        rollNumber: "105",
+        marks: 95
+    }
+];
+
+
+//   Question 1:Return name of student in captial
+
+// const nameInCapital = students.map((stud)=>{
+//     return stud.name.toLocaleUpperCase()
+// })
+// console.log(nameInCapital)
+
+// Question 2: Return only details  of those who scored more than 90 marks
+
+// const details = students.filter((stud) => { return stud.marks > 90 })
+// console.log(details)
+
+// Questoin 3: Return only details of those whose scored more than 80 and roll no above 103
+
+// const details = students.filter((stu)=>{
+//     return stu.marks>80 && stu.rollNumber > 103
+// })
+// console.log(details)
+
+// Question 4: Return total marks of students
+
+// const total = students.reduce((acc,curr)=>{
+// return acc+curr.marks
+// },0)
+// console.log(total)
+
+// Question 5: Return name of students who scored more than 80 marks
+
+// const studentNames = students.filter((stud)=>{
+//     return stud.marks > 80
+// }).map((stud)=>{
+//     return stud.name
+// })
+
+// console.log(studentNames)
+
+// Question 6:Return total marks for student greater than 95 where 10 marks are added to the student who scored less than 90
+
+// const total = students.filter((stud) => {
+//     if (stud.marks < 90) {
+//         stud.marks += 10
+//     }
+//     return stud.marks > 90
+// }).reduce((acc, curr) => {
+//     return acc + curr.marks
+// }, 0)
+
+// console.log(total)
+
+// console.log(total)
