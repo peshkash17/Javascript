@@ -13,7 +13,7 @@
 
 // function displayName(){
 //     var username = 'kalpesh';
-    
+
 // }
 // console.log(username)
 // displayName()
@@ -102,7 +102,7 @@
 //     return function(index){
 //         console.log(a[index])
 //     }
-   
+
 // }
 // const closure = find()
 // console.time("6")
@@ -135,3 +135,91 @@
 // }
 
 // a()
+
+// Quoestion: How would you use closure to create a private counter
+
+// function counter() {
+//     var _counter = 0;
+
+//     function add(increment) {
+//         _counter += increment; // Corrected from 'counter' to '_counter'
+//     }
+
+//     function retrieve() {
+//         return 'counter: ' + _counter; // Typo: 'retrive' to 'retrieve'
+//     }
+
+//     return {
+//         add,
+//         retrieve // Typo: 'retrive' to 'retrieve'
+//     };
+// }
+
+// const c = counter();
+
+// c.add(5);
+// c.add(10);
+// console.log(c.retrieve()); // Outputs: "counter: 15"
+
+
+// // Run this function only one using closure
+
+// let view
+// function likeTheVideo() {
+//     view = "Kalpesh Pawar"
+//     console.log('Hire ' + view);
+// }
+
+// likeTheVideo()
+
+// // Solution using closure
+
+// let view1
+// function likeTheVideo() {
+//     let count = 0
+//     return function () {
+//         if (count > 0) {
+//             console.log('Kalpesh Pawar is already hired by Meta')
+//         }
+//         else {
+//             view = "Kalpesh Pawar"
+//             console.log('Hire ' + view);
+//             count++
+//         }
+//     }
+
+// }
+
+// let called = likeTheVideo()
+
+// called();
+// called();
+// called();
+// called();
+// called();
+// called();
+// called();
+
+// Polyfill for inbuild once function
+
+// function once(func, context){
+//     let ran;
+
+//     return function (){
+//         if(func){
+//             ran = func.apply(context || this, arguments);
+//             func = null
+//         }
+//         return ran
+//     }
+// }
+
+// const hello = once((a, b)=> console.log("hello",a , b))
+
+// hello()
+// hello()
+// hello()
+// hello()
+
+
+// Function to build for memoize polyfill
