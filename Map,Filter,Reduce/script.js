@@ -81,33 +81,33 @@
 
 // interview questions on map,filter reduce
 
-const students = [
-    {
-        name: "John Doe",
-        rollNumber: "101",
-        marks: 85
-    },
-    {
-        name: "Jane Smith",
-        rollNumber: "102",
-        marks: 92
-    },
-    {
-        name: "Michael Johnson",
-        rollNumber: "103",
-        marks: 78
-    },
-    {
-        name: "Emily Davis",
-        rollNumber: "104",
-        marks: 88
-    },
-    {
-        name: "William Brown",
-        rollNumber: "105",
-        marks: 95
-    }
-];
+// const students = [
+//     {
+//         name: "John Doe",
+//         rollNumber: "101",
+//         marks: 85
+//     },
+//     {
+//         name: "Jane Smith",
+//         rollNumber: "102",
+//         marks: 92
+//     },
+//     {
+//         name: "Michael Johnson",
+//         rollNumber: "103",
+//         marks: 78
+//     },
+//     {
+//         name: "Emily Davis",
+//         rollNumber: "104",
+//         marks: 88
+//     },
+//     {
+//         name: "William Brown",
+//         rollNumber: "105",
+//         marks: 95
+//     }
+// ];
 
 
 //   Question 1:Return name of student in captial
